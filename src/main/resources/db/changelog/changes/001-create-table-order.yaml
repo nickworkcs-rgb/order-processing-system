@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+        id: 1
+        author: "Nikita Malinkin"
+        changes:
+          - createTable:
+              tableName: orders
+              columns:
+                - column:
+                    name: id
+                    type: bigint
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: good_name
+                    type: varchar(255)
+                    constraints:
+                      nullable: false
+                - column:
+                    name: amount
+                    type: int
+                    constraints:
+                      nullable: false
+                - column:
+                    name: status
+                    type: varchar(255)
+                    constraints:
+                      nullable: false
+                - column:
+                    name: created_at
+                    type: timestamp
+                    defaultValueComputed: CURRENT_TIMESTAMP
+                    constraints:
+                      nullable: false
