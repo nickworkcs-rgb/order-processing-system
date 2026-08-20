@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: "Nikita Malinkin"
+      changes:
+        - dropColumn:
+            tableName: orders
+            columns:
+              - column:
+                  name: good_name
+              - column:
+                  name: amount
